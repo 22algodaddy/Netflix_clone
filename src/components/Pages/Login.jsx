@@ -1,12 +1,12 @@
 import {Link,useNavigate} from "react-router-dom";
-import {UserAuth, userAuth} from "../../context/Authcontext.js"
+import {UserAuth} from "../../context/Authcontext.js"
 import {useState} from "react";
 
 const Login = () => {
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
     const [Error, setError] = useState(" ");
-    const {user,logIn} = UserAuth();
+    const {logIn} = UserAuth();
     const navigate=useNavigate();
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -35,7 +35,7 @@ const Login = () => {
                     <div className="max-w-[450px] h-[600px] mx-auto bg-black/80 text-white">
                         <div className="max-w-[320px] mx-auto py-16">
                             <h1 className="font-bold font-sans text-3xl text-gray-400">Sign In</h1>
-                            {Error!=" " ? <p className="p-3 bg-red-900 my-3 rounded-md">{Error}</p> : null}
+                            {Error!==" " ? <p className="p-3 bg-red-900 my-3 rounded-md">{Error}</p> : null}
                             <form onClick={handleSubmit} className="w-full flex flex-col py-2">
                                 <input onChange={handelOnChange}
                                        className="p-3 my-2 bg-gray-700 rounded"
