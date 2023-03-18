@@ -5,10 +5,10 @@ const Home = () => {
     return(
         <>
           <Main></Main>
-            <Row title="Upcoming" fetchURL={Request.requestUpcoming} ></Row>
-            <Row title="Popular" fetchURL={Request.requestPopular} ></Row>
-            <Row title="TopRated" fetchURL={Request.requestTopRated} ></Row>
-            <Row title="Recommended" fetchURL={Request.requestRecommended} ></Row>
+            <Row rowID='1' title="Upcoming" fetchURL={Request.requestUpcoming}></Row>
+            <Row rowID='2' title="Popular" fetchURL={Request.requestPopular} ></Row>
+            <Row rowID='3' title="TopRated" fetchURL={Request.requestTopRated}></Row>
+            <Row rowID='4' title="Trending" fetchURL={Request.requestTrending}></Row>
         </>
     );
 }
